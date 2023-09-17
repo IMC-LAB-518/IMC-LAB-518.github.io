@@ -115,3 +115,16 @@ scancel <job id>  # sbatch 提交会回自动返回一个id，或者通过squeue
 [https://zhuanlan.zhihu.com/p/345387783](https://zhuanlan.zhihu.com/p/345387783)
 
 
+# Remote Development
+这里建议使用VS CODE进行远程开发，相对来说要比PyCharm更加稳定。
+
+使用教程请参考：
+https://code.visualstudio.com/docs/remote/remote-overview
+https://blog.csdn.net/liqfyiyi/article/details/120055064
+
+# Local Package Installation
+为了防止用户随意安装一些不常用的包导致系统崩溃，因此除了管理员其余所有用户没有sudo权限。管理员会将一些常用的包安装到全局环境，而不常用包这里建议采用一种本地安装包环境管理工具spack（不使用sudo权限）进行安装。该工具目前已安装成在`/imc_lab/spack` 下, 你可已将其添加自己环境路径下即可启用spack。Spack使用教程请参考：
+> https://spack.readthedocs.io/en/latest/
+> https://zhuanlan.zhihu.com/p/426743137 
+
+如若遇到一些棘手的安装包问题可以向管理员申请sudo权限。
