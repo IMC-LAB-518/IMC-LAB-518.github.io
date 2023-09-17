@@ -15,5 +15,5 @@ nav:
     - Introduction: ''
   - Installation:
     - Anaconda3: demos/anaconda3
-    - Another Page: demos/another-page
+    - Admin: demos/admin
     - Table of Contents: demos/toc
