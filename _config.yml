@@ -1,23 +1,19 @@
----
-auto        : false
-pygments    : false
-markdown    : redcarpet2
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", "with_toc_data"]
-charset     : UTF-8
-exclude     : ["Gemfile", "Gemfile.lock", "Rakefile", "scss"]
-title       : "BackChat.io Documentation Template"
-sub_title   : "Where documentation goes to be awesome"
-rich_title  : "<strong>BackChat.io</strong> Documentation Template"
-rich_byline : "Where documentation goes to be <strong>awesome</strong>"
-sponsor:
-  byline    : "Sponsored by"
-  logo      : "//assets.backchat.io/images/logo.png"
-  name      : "BackChat.io"
-  url       : "https://backchat.io"
-  footer    : "This project is maintained by <a href=\"https://backchat.io\">BackChat.io</a>, the real-time data filtering API for the cloud."
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - script
+  - src
 
-ga_code     : "UA-240612-7"
-github:
-  username  : "backchatio"
-  project   : "github-pages-doc-theme"
+remote_theme: marella/jekyll-theme-documentation
+
+permalink: pretty
+nav:
+  - Getting Started:
+    - Introduction: ''
+  - Demos:
+    - Markdown: demos/markdown
+    - Another Page: demos/another-page
+    - Table of Contents: demos/toc

@@ -1,0 +1,24 @@
+{
+  "private": true,
+  "scripts": {
+    "postinstall": "gem install bundler && bundle install",
+    "start": "npm run build:watch & npm run start:jekyll",
+    "start:jekyll": "bundle exec jekyll serve --baseurl=/jekyll-theme-documentation --livereload",
+    "build": "npm run build:sass && npm run build:js",
+    "build:js": "cp node_modules/anchor-js/anchor.min.js assets/js/app.js",
+    "build:sass": "node-sass --precision=8 --include-path=node_modules --output-style=compressed src/sass -o assets/css",
+    "build:watch": "npm run build && npm run build:sass -- --watch"
+  },
+  "author": "Ravindra Marella",
+  "license": "MIT",
+  "devDependencies": {
+    "anchor-js": "^4.1.0",
+    "bootstrap": "^4.1.1",
+    "node-sass": "^7.0.3",
+    "primer-base": "^1.7.0",
+    "primer-layout": "^1.4.5",
+    "primer-markdown": "^3.7.5",
+    "primer-navigation": "^1.5.3",
+    "primer-utilities": "^4.9.0"
+  }
+}

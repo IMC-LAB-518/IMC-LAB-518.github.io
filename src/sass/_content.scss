@@ -1,0 +1,45 @@
+.markdown-body .highlight pre {
+  background-color: #272822;
+  color: #f8f8f2;
+}
+
+.highlight {
+  // Name.Builtin.Pseudo
+  .bp {
+    color: #f6aa11;
+    font-style: italic;
+  }
+  // Name.Builtin
+  .nb {
+    color: #66d9ef;
+    font-style: italic;
+  }
+  // Name.Decorator
+  .nd {
+    color: #66d9ef;
+  }
+}
+
+.toc {
+  @extend .menu;
+  li {
+    list-style-type: none;
+    margin: 0;
+  }
+  a {
+    @extend .menu-item;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-bottom: none;
+  }
+  ul {
+    border-bottom: 1px solid $gray-200;
+    a {
+      padding-left: 2em;
+    }
+  }
+}
+
+.anchorjs-link:hover {
+  text-decoration: none;
+}

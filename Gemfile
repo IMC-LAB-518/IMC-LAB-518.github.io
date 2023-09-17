@@ -1,6 +1,5 @@
-source :rubygems
+source "https://rubygems.org"
 
-gem "jekyll"
-gem "redcarpet"
-gem "compass"
-gem "pygments.rb"
+gemspec
+
+gem 'github-pages', group: :jekyll_plugins
