@@ -123,7 +123,23 @@ scancel <job id>  # sbatch 提交会回自动返回一个id，或者通过squeue
 2. [Zhihu](https://blog.csdn.net/liqfyiyi/article/details/120055064)
 
 # Local Package Installation
-为了防止用户随意安装一些不常用的包导致系统崩溃，因此除了管理员其余所有用户没有sudo权限。管理员会将一些常用的包安装到全局环境，而不常用包这里建议采用一种本地安装包环境管理工具spack（不使用sudo权限）进行安装。该工具目前已安装成在`/imc_lab/spack` 下, 你可已将其添加自己环境路径下即可启用spack。Spack使用教程请参考：
+为了防止用户随意安装一些不常用的包导致系统崩溃，因此除了管理员其余所有用户没有sudo权限。管理员会将一些常用的包安装到全局环境，而不常用包这里建议采用一种本地安装包环境管理工具spack（不使用sudo权限）进行安装。该工具目前已安装成在`/imc_lab/spack` 下, 你可已将其添加自己环境路径下即可启用spack。具体示例如下：
+
+
+```bash
+# Python code with syntax highlighting
+vim ~/.bashrc     #  如果是windows采用记事本打开也可以
+
+# 添加下面的指令
+export SPACK_ROOT=/home/mirukj/Devs/spack
+export PATH=${SPACK_ROOT}/bin:${PATH}
+
+# 按ESC 输入 :wq 保存
+
+source ~/.bashrc   # 使环境生效
+```
+
+详细的Spack使用教程请参考：
 1. [https://spack.readthedocs.io/en/latest/](https://spack.readthedocs.io/en/latest/)
 
 

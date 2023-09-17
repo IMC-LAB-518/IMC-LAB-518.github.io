@@ -1,42 +1,41 @@
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+为了方便, `/work/shared_packages/miniconda3` 已经装好了个干净的miniconda3, 你可以直接复制到自己的工作区。
 
-[Link to another page](../another-page).
-
-There should be whitespace between paragraphs.
-
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
-
-# [](#header-1)Header 1
-
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
-
-## [](#header-2)Header 2
-
-> This is a blockquote following a header.
->
-> When something is important enough, you do it even if the odds are not in your favor.
-
-### [](#header-3)Header 3
-
-```py
+```bash
 # Python code with syntax highlighting
-import module
+cd /work/shared_packages
+cp -r miniconda3 /work/imc_lab/<your username>/
+```
+复制完miniconda3记得修改环境路径，要不然你的user环境下识别不了conda，具体操作如下，
 
-def function(x):
-    return x + 1
+```bash
+vim ~/.bashrc
 
-class ClassName(object):
-    """docstring for ClassName"""
-    def __init__(self, arg):
-        super(ClassName, self).__init__()
-        self.arg = arg
 
-    @property
-    def foo(self):
-        return self._foo
+# 添加下面的指令到后面， 记得替换你自己路径<your username>
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/work/shared_packages/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/work/imc_lab/<your username>/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/work/imc_lab/<your username>/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/work/imc_lab/<your username>/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+# 按ESC 输入 :wq 保存
+
+source ~/.bashrc   # 使环境生效
 ```
 
-```js
+
+<!-- ```js
 // Javascript code with syntax highlighting.
 var fun = function lang(l) {
   dateformat.i18n = require('./lang/' + l)
@@ -134,4 +133,4 @@ Long, single-line code blocks should not wrap. They should horizontally scroll i
 
 ```
 The final element.
-```
+``` -->

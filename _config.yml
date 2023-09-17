@@ -13,7 +13,7 @@ permalink: pretty
 nav:
   - Getting Started:
     - Introduction: ''
-  - Demos:
-    - Markdown: demos/markdown
+  - Installation:
+    - Markdown: demos/anaconda3
     - Another Page: demos/another-page
     - Table of Contents: demos/toc
