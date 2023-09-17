@@ -14,6 +14,6 @@ nav:
   - Getting Started:
     - Introduction: ''
   - Installation:
-    - Markdown: demos/anaconda3
+    - Anaconda3: demos/anaconda3
     - Another Page: demos/another-page
     - Table of Contents: demos/toc
