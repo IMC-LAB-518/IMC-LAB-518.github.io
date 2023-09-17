@@ -20,6 +20,7 @@ ssh <user-name>@10.10.115.27
 scp -r <source-path> <user-name>@10.10.115.27:<target-path>
 ```
 * Accessing GUI Applications: 一般服务器是建议用X11服务回传画面，但为了大家方便可以使用实验室的服务器显示器进行查看（建议是非必要不要通过服务器显示器操作，防止打开奇怪的应用程序导致服务器卡死，如果需要用类似open3d这种gui可以通过服务器显示器查看，而图片和视频可以在本地通过vscode连接直接预览，无需通过服务器显示器查看。）
+
 ## Organzing your work space
 
 如前面第一节所提到，/home/username会自动生成，在这里建议存放自己的私人数据和代码。而大型文件例如数据集，模型权重，git库，anaconda环境建议存放在 `/iml_lab/<user-name>` ，这里需要用mkdir自己创建目录。大型数据集例为了方便大家访问可以下载或上传至`/iml_lab/datasets/`
